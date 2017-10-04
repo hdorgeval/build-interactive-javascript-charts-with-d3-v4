@@ -1,0 +1,28 @@
+{
+  "name": "build-interactive-javascript-charts-with-d3-v4",
+  "version": "1.0.0",
+  "description": "my repo for the egghead.io course Build Interactive JavaScript Charts with D3 v4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync:init":"browser-sync init",
+    "browser-sync": "browser-sync start --no-ui",
+    "lesson1":"npm run browser-sync -- --config lesson-01/bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdorgeval/build-interactive-javascript-charts-with-d3-v4.git"
+  },
+  "author": "Henri d'Orgeval",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdorgeval/build-interactive-javascript-charts-with-d3-v4/issues"
+  },
+  "homepage": "https://github.com/hdorgeval/build-interactive-javascript-charts-with-d3-v4#readme",
+  "dependencies": {
+    "d3": "^4.10.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
