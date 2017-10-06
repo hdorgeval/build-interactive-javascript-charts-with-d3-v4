@@ -8,7 +8,8 @@
     "browser-sync:init": "browser-sync init",
     "browser-sync": "browser-sync start --no-ui",
     "lesson1": "npm run browser-sync -- --config lesson-01/bs-config.js",
-    "lesson2": "npm run browser-sync -- --config lesson-02/bs-config.js"
+    "lesson2": "npm run browser-sync -- --config lesson-02/bs-config.js",
+    "lesson3": "npm run browser-sync -- --config lesson-03/bs-config.js"
   },
   "repository": {
     "type": "git",
