@@ -79,13 +79,31 @@ d3.json("data/data.json",(data)=>{
          .attr("r",3)
          .attr("fill", sparkline.color)
     
+
+    // create a method that will display or not the label on the chart
+    function showMinMax(d,i,data)
+    {
+        console.log(`i: ${i}`);
+        if (i === 0 || (i == data.length-1) ) {
+            return d;
+        }
+        const previousValue = data[i-1];
+        const nextValue = data[i+1];
+        if( d > previousValue && d > nextValue) {
+            return d;
+        }
+        if( d < previousValue && d < nextValue) {
+            return d;
+        }
+    }
+
     //insert the value as label at each point of the line
     if (sparkline.label.isVisible){
         svg.selectAll("text")
              .data(data)
              .enter()
              .append("text")
-               .text(d=>d)
+               .text((d,i)=> showMinMax(d,i,data))
                .attr("x",(d,i)=> xLinearScale(i)+intervalWidth/2)
                .attr("y",d=> sparkline.height- yLinearScale(d) + sparkline.label.yOffset)
                .attr("text-anchor","middle")
@@ -94,5 +112,4 @@ d3.json("data/data.json",(data)=>{
                .attr("font-size",sparkline.label.font.size)
     }
     
-        
 });
