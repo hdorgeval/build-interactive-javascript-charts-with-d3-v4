@@ -68,6 +68,17 @@ d3.json("data/data.json",(data)=>{
          .style("stroke",sparkline.color)
          
     
+    //materialize each point of the curve as a small circle
+    svg.selectAll(".point")
+       .data(points)
+       .enter()
+       .append("circle")
+         .attr("class","point")
+         .attr("cx",p => p.x)
+         .attr("cy", p => p.y)
+         .attr("r",3)
+         .attr("fill", sparkline.color)
+    
     //insert the value as label at each point of the line
     if (sparkline.label.isVisible){
         svg.selectAll("text")
