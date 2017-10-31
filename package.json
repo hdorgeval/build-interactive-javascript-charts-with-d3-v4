@@ -22,8 +22,8 @@
     "lesson13": "npm run browser-sync -- --config lesson-13/bs-config.js",
     "lesson14": "npm run browser-sync -- --config lesson-14/bs-config.js",
     "lesson15": "npm run browser-sync -- --config lesson-15/bs-config.js",
-    "lesson16": "npm run browser-sync -- --config lesson-16/bs-config.js"
-
+    "lesson16": "npm run browser-sync -- --config lesson-16/bs-config.js",
+    "lesson17": "npm run browser-sync -- --config lesson-17/bs-config.js"
   },
   "repository": {
     "type": "git",
